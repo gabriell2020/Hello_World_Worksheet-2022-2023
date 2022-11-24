@@ -1,5 +1,6 @@
 #Worksheet#4
 #Gabby
+
 library(dplyr)
 library(readr)
 library(read.table)
@@ -55,6 +56,7 @@ factorData <- data.frame(
   Direction = c("East","West","North"),
   Frequency = c(1,4,3)
 )
+
 factorData
 newOrderData <- factor(factorData,levels = c("East","West","North"))
 print(newOrderData)
@@ -62,15 +64,10 @@ print(newOrderData)
 #5. Enter the data below in Excel with file name = import_march.csv
 
 #a. Import the excel file into the Environment Pane using read.table() function.
-library(readxl)
-import_march <- read_excel("Worksheet#4/import_march.xlsx")
-View(import_march)
-import_march
+
+getwd()
+import <- read.table("import_march.csv", header = TRUE, sep=",")
+import
+
 #b. View the dataset. Write the code and its result.
-
-
-
-
-
-
 
